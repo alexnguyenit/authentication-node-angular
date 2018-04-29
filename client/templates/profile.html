@@ -1,0 +1,37 @@
+<nav class="navbar navbar-default">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+        aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="#" class="navbar-brand">Nodejs Authentication with AngularJS</a>
+    </div>
+    <div id="navbar" class="collapse navbar-collapse">
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+          <a href="#">{{user.email}}</a>
+        </li>
+        <li>
+          <a ng-click="logout()">Logout</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="row">
+  <div class="col-sm-8 col-sm-offset-2">
+    <div class="well">
+      <h1 class="title">Logined</h1>
+      <button class="button button-full button-balanced" ng-click="getInfo()">User info</button>
+      <button class="button button-full button-balanced" ng-click="killSession()">Kill token</button>
+      <p>
+        <strong>id</strong>: {{user._id}}
+        <strong>email</strong>: {{user.email}}
+      </p>
+    </div>
+  </div>
+</div>

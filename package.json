@@ -1,0 +1,28 @@
+{
+  "name": "auth-json-web-token",
+  "version": "1.0.0",
+  "description": "This is auth json web token",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "bcryptjs": "*",
+    "body-parser": "*",
+    "cors": "*",
+    "express": "*",
+    "jsonwebtoken": "*",
+    "mongoose": "*",
+    "morgan": "*",
+    "passport": "^0.3.2",
+    "passport-jwt": "*"
+  },
+  "keywords": [
+    "json",
+    "web",
+    "token"
+  ],
+  "author": "hoangnn",
+  "license": "ISC"
+}

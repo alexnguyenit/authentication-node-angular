@@ -1,0 +1,32 @@
+<div class="col-sm-8 col-sm-offset-2">
+  <h1>User Register Form</h1>
+  <div ng-show="message">
+    <div class="alert alert-success alert-dismissable">
+      <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+      <h4>
+        <strong>{{ message.title }}</strong>
+      </h4>
+      <p>{{message.template}}</p>
+    </div>
+  </div>
+  <hr>
+  <!--LOGIN FORM-->
+  <form name="myForm" novalidate>
+    <div class="form-group" ng-class="{'has-error':'myForm.email.$touched && myForm.email.$invalid'}">
+      <label for="email">Email address</label>
+      <input type="email" name="email" ng-model="user.email" class="form-control" placeholder="Email" required>
+      <small class="help-block" ng-show="myForm.email.$touched && myForm.email.$invalid">
+        Enter a valid Email Address.
+      </small>
+    </div>
+    <div class="form-group" ng-class="{'has-error':'myForm.password.$touched && myForm.password.$invalid'}">
+      <label for="email">Email address</label>
+      <input type="password" name="password" ng-model="user.password" class="form-control" placeholder="Password" required>
+      <small class="help-block" ng-show="myForm.email.$touched && myForm.email.$error.minlength">
+        Password is required of minium 6 characters.
+      </small>
+    </div>
+    <input type="submit" class="btn btn-lg btn-primary btn-block" ng-disabled="myForm.$invalid" ng-click="register()">
+  </form>
+  <hr>
+</div>
